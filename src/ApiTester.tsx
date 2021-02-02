@@ -32,6 +32,11 @@ const ApiTester: React.FC<Props> = ({ url }: Props) => {
             data: `The result doesn't look like json:\n${text.slice(0, 40)}`,
           });
         }
+      } else {
+        setState({
+          state: "error",
+          data: `can't communicate with the api yet, got status ${result.status}`,
+        });
       }
     } catch {
       setState({
