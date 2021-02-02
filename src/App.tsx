@@ -1,22 +1,23 @@
 import React from "react";
+import mockServer from "./mockServer";
+import ApiTester from "./ApiTester";
+
 import "./App.css";
+
+mockServer();
 
 const App: React.FC<{}> = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-wrapper">
+        <header className="App-header">
+          <h1>Nice UI for you!</h1>
+        </header>
+        <main>
+          <ApiTester url="/api/teama" />
+          <ApiTester url="/api/teamb" />
+        </main>
+      </div>
     </div>
   );
 };

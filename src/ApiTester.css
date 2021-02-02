@@ -1,0 +1,59 @@
+.ApiTester {
+  text-align: left;
+}
+
+.ApiTester > * {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.ApiTester-result.idle,
+.ApiTester-result.fetching {
+  color: lightgray;
+}
+
+.ApiTester-result.success {
+  color: lightgreen;
+}
+
+.ApiTester-result.error {
+  color: indianred;
+}
+
+.ApiTester-title {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.ApiTester-title > * {
+  margin: 0;
+}
+
+.ApiTester-button {
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  font-weight: inherit;
+  font-size: inherit;
+  padding: 0.2rem 1rem;
+  color: #282c34;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.ApiTester-button:hover,
+button:focus {
+  background: whitesmoke;
+}
+
+.ApiTester-button:focus {
+  outline: 2px solid #fff;
+}
+
+.ApiTester-button:active {
+  transform: scale(0.99);
+}
